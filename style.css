@@ -52,8 +52,8 @@ header {
   opacity: 80%;
 }
 
-.scrolling {
+scrolling {
   background: black;
   opacity: 90%;
-  transition: 0.5;
+  transition: 0.5s;
 }
