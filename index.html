@@ -28,26 +28,27 @@
   </head>
 
   <body class="bg-light">
-    <div class="banner-wrap vh-100 vw-100 text-white">
+    <header class="p-2 p-2 text-white fixed-top">
+      <div>
+        <h3 class="float-md-start text-center">Portfolio</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#about-us">About us</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div
+      class="banner-wrap vh-100 vw-100 d-flex align-items-center justify-content-center text-white"
+    >
       <div class="overlay"></div>
-      <header class="p-5 p-3 text-white">
-        <div>
-          <h3 class="float-md-start text-center">Portfolio</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
-        </div>
-      </header>
-      <main
-        class="d-flex flex-column align-items-center justify-content-center h-75 text-center"
-      >
+      <main class="text-center">
         <h1 class="display-1">I am Funanani Mazuwo</h1>
-        <p class="lead">I am fullstack Developer</p>
+        <span id="typed" class="lead"></span>
       </main>
     </div>
-    <section>
+    <section id="about-us">
       <div class="container p-5">
         <div class="card">
           <div class="card-body">
@@ -93,22 +94,22 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="projects">
       <div class="container">
         <h1 class="text-center p-3"><mark>Projects</mark></h1>
         <div class="row">
           <div class="col-md-4 mt-3">
             <div class="card">
               <img
-                src="http://res.cloudinary.com/akhilboddu28/image/upload/v1634758209/hchreqqmi9qhebep7ju3.png"
+                src="http://res.cloudinary.com/akhilboddu28/image/upload/v1634572029/gvzob3poig7968zuubwm.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Netflix landing page</h5>
+                <h5 class="card-title">Youtube Clone</h5>
                 <p class="card-text">Build this with HTML & CSS</p>
                 <a
-                  href="https://app.netlify.com/sites/gentle-salamander-9fc566"
+                  href="https://thendo21.netlify.app/"
                   target="_blank"
                   class="btn btn-primary"
                   >View Website</a
@@ -125,15 +126,15 @@
           <div class="col-md-4 mt-3">
             <div class="card">
               <img
-                src="http://res.cloudinary.com/akhilboddu28/image/upload/v1634758209/hchreqqmi9qhebep7ju3.png"
+                src="http://res.cloudinary.com/akhilboddu28/image/upload/v1634573994/lohlfwbegtddonz6xn1f.png"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Netflix landing page</h5>
-                <p class="card-text">Build this with HTML & CSS</p>
+                <h5 class="card-title">Google Keep Clone</h5>
+                <p class="card-text">Build this with Javascript, HTML & CSS</p>
                 <a
-                  href="https://app.netlify.com/sites/gentle-salamander-9fc566"
+                  href="https://angry-euler-4bc830.netlify.app/"
                   target="_blank"
                   class="btn btn-primary"
                   >View Website</a
@@ -175,7 +176,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="contact">
       <div class="container p-5">
         <div class="card">
           <div class="card-body p-3 text-center">
@@ -241,5 +242,31 @@
         </div>
       </div>
     </section>
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-3">
+        <p>Developed by Funanani Mazuwo</p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        header.classList.toggle("scrolling", window.scrollY > 0);
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        strings: [
+          "Fullstack Developer.",
+          // "Coding instructor.",
+          // "Entrepreneur.",
+        ],
+        loop: true,
+        typeSpeed: 75,
+        shuffle: true,
+      });
+    </script>
   </body>
 </html>

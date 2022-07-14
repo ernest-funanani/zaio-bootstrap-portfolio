@@ -46,3 +46,14 @@
   color: #fff;
   border-bottom-color: #fff;
 }
+
+header {
+  background: black;
+  opacity: 80%;
+}
+
+.scrolling {
+  background: black;
+  opacity: 90%;
+  transition: 0.5;
+}
